@@ -5,15 +5,15 @@
 # to a directory
 #
 
-CUST_ID_LIST=1,2,42,9001
+SLUUG_MEMBER_ID_LIST=1,2,42,9001
 
 echo -e "******** \\nSql directory before: " 
 ls -all ./sql-statements/
 echo -e "********"
 
-for id in ${CUST_ID_LIST//,/ }; do
+for id in ${SLUUG_MEMBER_ID_LIST//,/ }; do
 
-   echo -e "UPDATE EXAMPLE.CUSTOMER_TABLE \\nSET IS_EXAMPLE = \"Y\" \\nWHERE CUST_ID = $id" > ./sql-statements/update-$id.sql
+   echo -e "UPDATE SLUUG_DATABASE.MEMBER_TABLE \\nSET IS_EXAMPLEi = \"Y\" \\nWHERE MEMBER_ID = $id" > ./sql-statements/update-$id.sql
 
 done
 
